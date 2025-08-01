@@ -21,6 +21,7 @@ vim.keymap.set('n', '<leader>so', ':update<CR>:source<CR>')
 vim.keymap.set('n', '<leader>ee', ':Exp<CR>')
 
 require("colorscheme")
+require("listchars")
 require("treesitter")
 require("lsp")
 require("git")
