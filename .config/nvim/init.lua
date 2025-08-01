@@ -7,12 +7,14 @@ vim.opt.expandtab = false
 vim.opt.swapfile = false
 vim.opt.winborder = "rounded"
 
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_tressitter#expr"
+vim.opt.foldlevel = 2
+
 vim.g.mapleader = " "
 
 vim.keymap.set('n', '<leader>so', ':update<CR>:source<CR>')
 vim.keymap.set('n', '<leader>ee', ':Exp<CR>')
--- Colorscheme
---
 
 vim.pack.add({
 	{ src = "https://github.com/EdenEast/nightfox.nvim" },
