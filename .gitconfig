@@ -1,0 +1,7 @@
+[credential]
+	helper = cache
+[init]
+	defaultBranch = main
+[user]
+	email = grimmjulian225@gmail.com
+	name = Julian Grimm
