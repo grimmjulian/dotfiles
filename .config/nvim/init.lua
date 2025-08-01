@@ -6,6 +6,8 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = false
 vim.opt.swapfile = false
 vim.opt.winborder = "rounded"
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = "number"
 
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_tressitter#expr"
@@ -23,3 +25,4 @@ vim.cmd("colorscheme carbonfox")
 
 require("treesitter")
 require("lsp")
+require("git")
