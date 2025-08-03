@@ -18,8 +18,8 @@ vim.opt.foldlevel = 2
 vim.g.mapleader = " "
 
 vim.keymap.set('n', '<leader>so', ':update<CR>:source<CR>')
-vim.keymap.set('n', '<leader>ee', ':Exp<CR>')
 
+require("file_explorer")
 require("colorscheme")
 require("listchars")
 require("treesitter")
