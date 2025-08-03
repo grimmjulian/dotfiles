@@ -14,7 +14,8 @@ require 'nvim-treesitter.configs'.setup {
 		"dockerfile",
 		"json",
 		"toml",
-		"yaml" },
+		"yaml",
+		"nix" },
 	sync_install = false,
 	auto_install = true,
 	highlight = {
