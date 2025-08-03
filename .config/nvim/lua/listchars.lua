@@ -17,6 +17,8 @@ vim.o.listchars = table.concat(
 	{ 'extends:…',
 		'nbsp:␣',
 		'precedes:…',
-		'tab:|->' },
+		'tab:|->',
+		'eol:⏎',
+		'space:·' },
 	','
 ) -- Special text symbols
