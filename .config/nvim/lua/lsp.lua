@@ -2,7 +2,10 @@ vim.pack.add({
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
 })
 
-vim.lsp.enable({ "lua_ls", "r_language_server", "dockerls" })
+vim.lsp.enable({ "lua_ls",
+	"r_language_server",
+	"dockerls",
+	"jsonls" })
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 vim.api.nvim_create_autocmd('LspAttach', {
 	callback = function(ev)
