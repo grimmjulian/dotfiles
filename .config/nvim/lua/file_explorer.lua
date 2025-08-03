@@ -5,7 +5,7 @@ vim.pack.add({
 require("oil").setup({
 	win_options = {
 		-- cursorcolumn = true,
-		signcolumn = "yes:2"
+		signcolumn = "auto:2"
 	},
 	view_options = {
 		show_hidden = true

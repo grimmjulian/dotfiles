@@ -20,6 +20,7 @@ vim.g.mapleader = " "
 vim.keymap.set('n', '<leader>so', ':update<CR>:source<CR>')
 
 require("file_explorer")
+require("fuzzy_finder")
 require("colorscheme")
 require("listchars")
 require("treesitter")
