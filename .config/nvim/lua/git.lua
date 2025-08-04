@@ -13,3 +13,4 @@ require("gitsigns").setup({
 
 vim.keymap.set("n", "<leader>gs", vim.cmd.LazyGit)
 vim.keymap.set("n", "<leader>gl", vim.cmd.LazyGitLog)
+vim.keymap.set("n", "<leader>gd", vim.cmd.Gitsigns({args = {"toggle_deleted"}}))
