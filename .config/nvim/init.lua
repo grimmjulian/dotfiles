@@ -7,8 +7,11 @@ vim.opt.wrap = false
 vim.opt.swapfile = false
 vim.opt.winborder = "rounded"
 
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
+vim.opt.tabstop = 8
+vim.opt.shiftwidth = 8
 vim.opt.expandtab = false
 
 vim.opt.foldmethod = "expr"
@@ -17,7 +20,7 @@ vim.opt.foldlevel = 2
 
 vim.g.mapleader = " "
 
-vim.keymap.set('n', '<leader>so', ':update<CR>:source<CR>')
+vim.keymap.set('t', '<Esc>', "<C-\\><C-n>")
 
 require("file_explorer")
 require("fuzzy_finder")

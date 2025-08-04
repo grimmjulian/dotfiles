@@ -1,6 +1,6 @@
 vim.pack.add({
-	{ src = "https://github.com/kdheepak/lazygit.nvim" },
-	{ src = "https://github.com/lewis6991/gitsigns.nvim" }
+	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
+	{ src = "https://github.com/tpope/vim-fugitive" }
 })
 
 require("gitsigns").setup({
@@ -11,6 +11,8 @@ require("gitsigns").setup({
 	numhl = false
 })
 
-vim.keymap.set("n", "<leader>gs", vim.cmd.LazyGit)
-vim.keymap.set("n", "<leader>gl", vim.cmd.LazyGitLog)
-vim.keymap.set("n", "<leader>gd", vim.cmd.Gitsigns({args = {"toggle_deleted"}}))
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+
+vim.keymap.set('n', '<leader>gl', function()
+  vim.cmd('Git log --oneline --all --graph')
+end, { desc = 'Git log (oneline graph)', noremap = true, silent = true })
