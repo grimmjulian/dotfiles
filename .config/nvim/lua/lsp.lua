@@ -6,6 +6,8 @@ vim.lsp.enable({ "lua_ls",
 	"r_language_server" })
 
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
+vim.keymap.set('n', '<leader>ld', vim.diagnostic.setqflist)
+-- gra for code actions 
 
 vim.api.nvim_create_autocmd('LspAttach', {
 	callback = function(ev)
