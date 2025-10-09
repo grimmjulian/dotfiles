@@ -20,8 +20,7 @@ vim.opt.foldlevel = 2
 
 vim.g.mapleader = " "
 
-vim.keymap.set('t', '<Esc>', "<C-\\><C-n>")
-
+require("terminal")
 require("file_explorer")
 require("fuzzy_finder")
 require("colorscheme")
