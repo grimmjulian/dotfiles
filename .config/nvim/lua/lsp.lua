@@ -7,7 +7,7 @@ vim.lsp.enable({ "lua_ls",
 
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 vim.keymap.set('n', '<leader>ld', vim.diagnostic.setqflist)
--- gra for code actions 
+-- gra for code actions
 
 vim.api.nvim_create_autocmd('LspAttach', {
 	callback = function(ev)
