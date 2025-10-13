@@ -19,6 +19,26 @@ local function is_r_ready()
 	return false
 end
 
+local function file_contains(filepath, search_str)
+	local file = io.open(filepath, "r")
+	if not file then return false end
+	local content = file:read("*all")
+	file:close()
+	return content:find(search_str) ~= nil
+end
+
+local test_cmd = ""
+local check_cmd = ""
+
+if file_contains("DESCRIPTION", "testthat") then
+	test_cmd = "devtools::test()"
+	check_cmd = "devtools::check()"
+elseif file_contains("DESCRIPTION", "tinytest") then
+	test_cmd = "pkgload::load_all('.');tinytest::test_all()"
+else
+	test_cmd = "message('Neither testthat nor tinytest found.')"
+end
+
 local function my_r_term(name, auto_cmd)
 	local existing_buf = buf_exists(name)
 	my_term(name, "R")
@@ -35,7 +55,23 @@ local function my_r_term(name, auto_cmd)
 end
 
 vim.keymap.set("n", "<leader>tr", function() my_term("R_terminal", "R") end)
--- vim.keymap.set('n', '<leader>dt', function() my_term("devtools", "R", "devtools::test()") end)
-vim.keymap.set("n", "<leader>dt", function() my_r_term("devtools", "devtools::test()") end)
-vim.keymap.set("n", "<leader>dc", function() my_r_term("devtools", "devtools::check()") end)
+vim.keymap.set(
+	"n",
+	"<leader>dt",
+	function() my_r_term("devtools", test_cmd) end
+)
+vim.keymap.set(
+	"n",
+	"<leader>dc",
+	function()
+		if check_cmd == "" then
+			my_term("R_CMD", nil)
+			local buf = vim.b.terminal_job_id
+			local cmd = "R CMD check .\n"
+			vim.api.nvim_chan_send(buf, cmd)
+		else
+			my_r_term("devtools", "devtools::check()")
+		end
+	end
+)
 vim.keymap.set('n', '<leader>sra', function() my_r_term("shiny::runApp", "source('app.R')") end)
