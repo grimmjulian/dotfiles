@@ -14,5 +14,5 @@ require("gitsigns").setup({
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 
 vim.keymap.set('n', '<leader>gl', function()
-  vim.cmd('Git log --oneline --all --graph')
+  vim.cmd('Git log --oneline --all --graph --decorate')
 end, { desc = 'Git log (oneline graph)', noremap = true, silent = true })
