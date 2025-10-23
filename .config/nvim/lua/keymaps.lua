@@ -12,6 +12,7 @@ vim.keymap.set('n', '<leader>ld', vim.diagnostic.setqflist)
 
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 vim.keymap.set('n', '<leader>gl', vim.cmd.GV, { desc = 'Git log (oneline graph)', noremap = true, silent = true })
-vim.keymap.set('n', '<leader>gfl', function()vim.cmd("GV!")end, { desc = 'Git log (oneline graph)', noremap = true, silent = true })
+vim.keymap.set('n', '<leader>gfl', function() vim.cmd("GV!") end,
+	{ desc = 'Git log (oneline graph)', noremap = true, silent = true })
 
 vim.keymap.set('t', '<Esc><Esc>', "<C-\\><C-n>")
