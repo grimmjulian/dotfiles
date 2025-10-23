@@ -1,5 +1,8 @@
-vim.lsp.enable({ "lua_ls",
-	"r_language_server" })
+vim.lsp.enable({
+	"lua_ls",
+	"r_language_server",
+	"air"
+})
 
 
 vim.api.nvim_create_autocmd('LspAttach', {
