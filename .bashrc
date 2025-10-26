@@ -12,3 +12,4 @@ alias nvim='bob run nightly'
 PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; PS1='[\u@\h \W ~${PS1_CMD1}]\\$ '
 
 . "$HOME/.local/bin/env"
+eval "$(starship init bash)"
