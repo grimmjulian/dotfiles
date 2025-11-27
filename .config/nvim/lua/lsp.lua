@@ -1,5 +1,6 @@
 vim.lsp.enable({
 	"lua_ls",
+	"jarl",
 	"r_language_server",
 	"air"
 })
