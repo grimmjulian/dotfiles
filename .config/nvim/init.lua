@@ -17,7 +17,7 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = false
 
 vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_tressitter#expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldlevel = 2
 
 -- vim.g.mapleader is defined in config.lazy

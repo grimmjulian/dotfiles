@@ -28,5 +28,10 @@ vim.keymap.set({ "i", "s" }, "<C-E>", function()
 	end
 end, { silent = true })
 
-local pt = require("pickleterm")
-vim.keymap.set("n", "<leader>tt", function() pt.open("default") end)
+-- Treesitter Keymaps
+-- init_selection = "gnn", -- set to `false` to disable one of the mappings
+-- node_incremental = "grn",
+-- scope_incremental = "grc",
+-- node_decremental = "grm",
+
+
