@@ -1,0 +1,6 @@
+# Ignore all env files (secrets)
+*.env
+*/env
+*/env.*
+.env
+.config/borg/env

@@ -25,4 +25,3 @@ vim.opt.foldlevel = 2
 require("lsp")
 require("keymaps")
 require("listchars")
-pt = require("pickleterm")

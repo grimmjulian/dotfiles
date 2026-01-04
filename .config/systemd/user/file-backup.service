@@ -1,0 +1,7 @@
+[Unit]
+Description=local backup
+
+[Service]
+Type=oneshot
+ExecStart=%h/bin/backup/local_backup.sh
+EnvironmentFile=%h/.config/borg/env
