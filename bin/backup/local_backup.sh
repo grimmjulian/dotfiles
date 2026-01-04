@@ -1,11 +1,5 @@
 #!/bin/sh
 
-# Setting this, so the repo does not need to be given on the commandline:
-export BORG_REPO=~/.home-snapshot
-
-# See the section "Passphrase notes" for more infos.
-export BORG_PASSPHRASE='copies of data'
-
 # some helpers and error handling:
 info() {
 	local msg="$*"
